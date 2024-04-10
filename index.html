@@ -87,7 +87,7 @@
                         </div>
                         <!-- new calculated value -->
                         <div>
-                            Area: <span id="rectangle-add" class="font-bold"></span> cm<sup>2</sup>
+                            Area: <span id="rectangle-add" class="font-bold">0</span> cm<sup>2</sup>
                         </div>
                         <button onclick="calculateRectangleArea()"
                             class="btn btn-primary text-white bg-[#1090D8] border-none w-full text-xl mt-12">Calculate</button>
@@ -101,8 +101,19 @@
                     <div class="card-body items-center text-center">
                         <h2 class="card-title font-bold">Parallelogram</h2>
                         <p>Area (A) = b x h</p>
-                        <p>b = 10cm, h = 12cm</p>
-                        <button
+                        <div>
+                            <input id="p-base" type="text" placeholder="b"
+                                class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
+                            <span class="mx-2">cm</span>
+                            <input id="p-height" type="text" placeholder="h"
+                                class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
+                            <span class="mx-2">cm</span>
+                        </div>
+                        <!-- New Area -->
+                        <div>
+                            <p>Area: <span id="p-area">0</span> cm<sup>2</sup></p>
+                        </div>
+                        <button onclick="calculateParallelogram()"
                             class="btn btn-primary text-white bg-[#1090D8] border-none w-full text-xl mt-12">Calculate</button>
                     </div>
                 </div>
@@ -114,8 +125,19 @@
                     <div class="card-body items-center text-center">
                         <h2 class="card-title font-bold">Rhombus</h2>
                         <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-                        <p>d<sub>1</sub> = 16cm d<sub>2</sub> = 8cm</p>
-                        <button
+                        <div>
+                            <input id="rhombus-d1" type="text" placeholder=""
+                                class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
+                            <span class="mx-2">cm</span>
+                            <input id="rhombus-d2" type="text" placeholder=""
+                                class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
+                            <span class="mx-2">cm</span>
+                        </div>
+                        <!-- New Area -->
+                        <div>
+                            <p>Area: <span class="font-bold" id="area-value">0</span> cm<sup>2</sup></p>
+                        </div>
+                        <button onclick="calculateRhombus()"
                             class="btn btn-primary text-white bg-[#1090D8] border-none w-full text-xl mt-12">Calculate</button>
                     </div>
                 </div>
@@ -127,7 +149,14 @@
                     <div class="card-body items-center text-center">
                         <h2 class="card-title font-bold">Pentagon</h2>
                         <p>Area (A) = 0.5 x p x b</p>
-                        <p>p = 6cm, b = 10cm</p>
+                        <div>
+                            <input type="text" placeholder="p"
+                                class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
+                            <span class="mx-2">cm</span>
+                            <input type="text" placeholder="b"
+                                class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
+                            <span class="mx-2">cm</span>
+                        </div>
                         <button
                             class="btn btn-primary text-white bg-[#1090D8] border-none w-full text-xl mt-12">Calculate</button>
                     </div>
@@ -140,7 +169,14 @@
                     <div class="card-body items-center text-center">
                         <h2 class="card-title font-bold">Ellipse</h2>
                         <p>Area (A) = πab</p>
-                        <p>a = 10cm, b = 4cm</p>
+                        <div>
+                            <input type="text" placeholder="a"
+                                class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
+                            <span class="mx-2">cm</span>
+                            <input type="text" placeholder="b"
+                                class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
+                            <span class="mx-2">cm</span>
+                        </div>
                         <button
                             class="btn btn-primary text-white bg-[#1090D8] border-none w-full text-xl mt-12">Calculate</button>
                     </div>
@@ -154,6 +190,8 @@
     </main>
     <script src="scripts/triangle.js"></script>
     <script src="scripts/rectangle.js"></script>
+    <script src="scripts/parallelogram.js"></script>
+    <script src="scripts/rhombus.js"></script>
 </body>
 
 </html>

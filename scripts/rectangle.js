@@ -15,4 +15,22 @@ function calculateRectangleArea(){
     // Show the Calculated Results
     const rectangleAdd = document.getElementById('rectangle-add');
     rectangleAdd.innerText = calculate;
+    
+
+    // // if/else condition for NaN value in the input.
+
+
+    
+    // if(isNaN(width) || isNaN(length)){
+    //     const rectangleAdd = document.getElementById('rectangle-add');
+    //     rectangleAdd.innerText = "Please! Provide a Number";
+    // }
+    // else{
+    //     // Calculate
+    //     const calculate = width * length;
+
+    //     // Show the calculated Results.
+    //     const rectangleAdd = document.getElementById('rectangle-add');
+    //     rectangleAdd.innerText = calculate;
+    // }
 }
