@@ -150,14 +150,18 @@
                         <h2 class="card-title font-bold">Pentagon</h2>
                         <p>Area (A) = 0.5 x p x b</p>
                         <div>
-                            <input type="text" placeholder="p"
+                            <input id="perimeter" type="text" placeholder="p"
                                 class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
                             <span class="mx-2">cm</span>
-                            <input type="text" placeholder="b"
+                            <input id="apothem" type="text" placeholder="b"
                                 class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
                             <span class="mx-2">cm</span>
                         </div>
-                        <button
+                        <!-- New Area Value -->
+                        <div>
+                            <p>Area: <span id="pentagon-area" class="font-bold"></span> cm<sup>2</sup></p>
+                        </div>
+                        <button onclick="calculatePentagon()"
                             class="btn btn-primary text-white bg-[#1090D8] border-none w-full text-xl mt-12">Calculate</button>
                     </div>
                 </div>
@@ -170,14 +174,18 @@
                         <h2 class="card-title font-bold">Ellipse</h2>
                         <p>Area (A) = πab</p>
                         <div>
-                            <input type="text" placeholder="a"
+                            <input id="major" type="text" placeholder="a"
                                 class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
                             <span class="mx-2">cm</span>
-                            <input type="text" placeholder="b"
+                            <input id="minor" type="text" placeholder="b"
                                 class="w-20 bg-gray-200 rounded-lg px-2 py-1 text-black placeholder-[black] outline-none">
                             <span class="mx-2">cm</span>
                         </div>
-                        <button
+                        <!-- New Value in the Area -->
+                        <div>
+                            <p>Area: <span id="ellipse-area" class="font-bold">0</span> cm<sup>2</sup></p>
+                        </div>
+                        <button onclick="calculateEllipse()"
                             class="btn btn-primary text-white bg-[#1090D8] border-none w-full text-xl mt-12">Calculate</button>
                     </div>
                 </div>
@@ -192,6 +200,8 @@
     <script src="scripts/rectangle.js"></script>
     <script src="scripts/parallelogram.js"></script>
     <script src="scripts/rhombus.js"></script>
+    <script src="scripts/pentagon.js"></script>
+    <script src="scripts/Ellipse.js"></script>
 </body>
 
 </html>
